@@ -31,25 +31,32 @@ namespace Google.Apis.Auth.OAuth2.Flows
     public class GoogleAuthorizationCodeFlow : AuthorizationCodeFlow
     {
         private readonly string revokeTokenUrl;
+        private string _accessType;
 
         /// <summary>Gets the token revocation URL.</summary>
         public string RevokeTokenUrl { get { return revokeTokenUrl; } }
 
         /// <summary>Constructs a new Google authorization code flow.</summary>
-        public GoogleAuthorizationCodeFlow(Initializer initializer)
+        public GoogleAuthorizationCodeFlow(Initializer initializer, string accessType = null)
             : base(initializer)
         {
+            _accessType = accessType;
             revokeTokenUrl = initializer.RevokeTokenUrl;
         }
 
         public override AuthorizationCodeRequestUrl CreateAuthorizationCodeRequest(string redirectUri)
         {
-            return new GoogleAuthorizationCodeRequestUrl(new Uri(AuthorizationServerUrl))
+            var codeRequestUrl = new GoogleAuthorizationCodeRequestUrl(new Uri(AuthorizationServerUrl))
             {
                 ClientId = ClientSecrets.ClientId,
                 Scope = string.Join(" ", Scopes),
                 RedirectUri = redirectUri
             };
+            if (!string.IsNullOrWhiteSpace(_accessType))
+            {
+                codeRequestUrl.AccessType = _accessType;
+            }
+            return codeRequestUrl;
         }
 
         public override async Task RevokeTokenAsync(string userId, string token,

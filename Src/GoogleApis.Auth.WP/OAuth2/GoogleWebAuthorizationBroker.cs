@@ -27,6 +27,9 @@ namespace Google.Apis.Auth.OAuth2
     /// <summary>A helper utility to manage the authorization code flow.</summary>
     public class GoogleWebAuthorizationBroker
     {
+        public const string ACCESS_TYPE_OFFLINE = "offline";
+        public const string ACCESS_TYPE_ONLINE = "online";
+
         /// <summary>Asynchronously authorizes the specified user.</summary>
         /// <remarks>
         /// It uses <see cref="Google.Apis.Util.Store.StorageDataStore"/> as the flow's data store by default.
@@ -37,16 +40,17 @@ namespace Google.Apis.Auth.OAuth2
         /// </param>
         /// <param name="user">The user to authorize.</param>
         /// <param name="taskCancellationToken">Cancellation token to cancel an operation.</param>
+        /// <param name="accessType">To specify access type of the oauth token</param>
         /// <returns>User credential.</returns>
         public static async Task<UserCredential> AuthorizeAsync(ClientSecrets clientSecrets,
-            IEnumerable<string> scopes, string user, CancellationToken taskCancellationToken)
+            IEnumerable<string> scopes, string user, CancellationToken taskCancellationToken, string accessType = null)
         {
             var initializer = new GoogleAuthorizationCodeFlow.Initializer
             {
                 ClientSecrets = clientSecrets,
             };
 
-            return await AuthorizeAsyncCore(initializer, scopes, user, taskCancellationToken).ConfigureAwait(false);
+            return await AuthorizeAsyncCore(initializer, scopes, user, taskCancellationToken, accessType).ConfigureAwait(false);
         }
 
         /// <summary>Asynchronously authorizes the specified user.</summary>
@@ -99,15 +103,16 @@ namespace Google.Apis.Auth.OAuth2
         /// </param>
         /// <param name="user">The user to authenticate.</param>
         /// <param name="taskCancellationToken">Cancellation token to cancel an operation.</param>
+        /// <param name="accessType">To specify access type of the oauth token</param>
         /// <returns>User credential.</returns>
         private static async Task<UserCredential> AuthorizeAsyncCore(
             GoogleAuthorizationCodeFlow.Initializer initializer, IEnumerable<string> scopes, string user,
-            CancellationToken taskCancellationToken)
+            CancellationToken taskCancellationToken, string accessType = null)
         {
             initializer.Scopes = scopes;
             initializer.DataStore = new StorageDataStore();
 
-            var installedApp = new AuthorizationCodeWPInstalledApp(new GoogleAuthorizationCodeFlow(initializer));
+            var installedApp = new AuthorizationCodeWPInstalledApp(new GoogleAuthorizationCodeFlow(initializer, accessType));
             return await installedApp.AuthorizeAsync(user, taskCancellationToken).ConfigureAwait(false);
         }
     }
