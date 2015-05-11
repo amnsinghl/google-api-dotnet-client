@@ -31,16 +31,16 @@ namespace Google.Apis.Auth.OAuth2.Flows
     public class GoogleAuthorizationCodeFlow : AuthorizationCodeFlow
     {
         private readonly string revokeTokenUrl;
-        private string _accessType;
+        private GoogleOauthParams _oauthParams;
 
         /// <summary>Gets the token revocation URL.</summary>
         public string RevokeTokenUrl { get { return revokeTokenUrl; } }
 
         /// <summary>Constructs a new Google authorization code flow.</summary>
-        public GoogleAuthorizationCodeFlow(Initializer initializer, string accessType = null)
+        public GoogleAuthorizationCodeFlow(Initializer initializer, GoogleOauthParams oauthParams = null)
             : base(initializer)
         {
-            _accessType = accessType;
+            _oauthParams = oauthParams;
             revokeTokenUrl = initializer.RevokeTokenUrl;
         }
 
@@ -52,9 +52,20 @@ namespace Google.Apis.Auth.OAuth2.Flows
                 Scope = string.Join(" ", Scopes),
                 RedirectUri = redirectUri
             };
-            if (!string.IsNullOrWhiteSpace(_accessType))
+            if (_oauthParams != null)
             {
-                codeRequestUrl.AccessType = _accessType;
+                switch (_oauthParams.AccessType)
+                {
+                    case AccessType.Online:
+                        codeRequestUrl.AccessType = "online";
+                        break;
+                    case AccessType.Offline:
+                        codeRequestUrl.AccessType = "offline";
+                        break;
+                }
+                if (!string.IsNullOrWhiteSpace(_oauthParams.LoginHint))
+                    codeRequestUrl.LoginHint = _oauthParams.LoginHint;
+                codeRequestUrl.ApprovalPrompt = "force";
             }
             return codeRequestUrl;
         }

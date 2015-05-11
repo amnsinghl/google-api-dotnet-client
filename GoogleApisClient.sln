@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D962DE0D-98E4-4E01-88BF-CEE63DF67585}"
 	ProjectSection(SolutionItems) = preProject
@@ -75,6 +75,7 @@ Global
 		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|ARM.Build.0 = Release|Any CPU
 		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9A8AA9EF-6904-43D8-8A26-0AB62069C2DC}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -91,6 +92,7 @@ Global
 		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|ARM.ActiveCfg = Release|Any CPU
+		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|ARM.Build.0 = Release|Any CPU
 		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{826CF988-EEE8-4B75-8F53-B7E851A17BAA}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -107,6 +109,7 @@ Global
 		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|ARM.Build.0 = Release|Any CPU
 		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C4DA0ABE-2C2E-4BB8-9881-5FF80B0C1AFD}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -123,6 +126,7 @@ Global
 		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|ARM.Build.0 = Release|Any CPU
 		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0AAAF32E-2BF0-49C5-BC2D-90874CFB5510}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -139,6 +143,7 @@ Global
 		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|ARM.Build.0 = Release|Any CPU
 		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8CFBF8D2-64CB-4703-A5B0-F9EF4DE41FA7}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -155,6 +160,7 @@ Global
 		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|Any CPU.Build.0 = Release|Any CPU
 		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|ARM.ActiveCfg = Release|Any CPU
+		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|ARM.Build.0 = Release|Any CPU
 		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{548D6C9B-A97B-4316-91AC-9AAD35202884}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -171,6 +177,7 @@ Global
 		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|ARM.Build.0 = Release|Any CPU
 		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B700243A-2FAC-454B-8858-47635BFA71C6}.Release|Win32.ActiveCfg = Release|Any CPU
@@ -231,6 +238,7 @@ Global
 		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|ARM.ActiveCfg = Release|Any CPU
+		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|ARM.Build.0 = Release|Any CPU
 		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DB18F3A6-B16A-477B-A7B1-C2B116D1BFB0}.Release|Win32.ActiveCfg = Release|Any CPU
